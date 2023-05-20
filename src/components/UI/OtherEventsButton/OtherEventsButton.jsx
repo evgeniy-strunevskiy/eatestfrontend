@@ -1,6 +1,6 @@
 import styles from './OtherEventsButton.module.scss'
 import classNames from 'classnames';
-import { ReactComponent as Arrow } from "../../assets/svg/arrow.svg";
+import { ReactComponent as Arrow } from "../../../assets/svg/arrow.svg";
 
 
 export const OtherEventsButton = () => {

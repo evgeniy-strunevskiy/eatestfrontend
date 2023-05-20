@@ -1,0 +1,23 @@
+@use '../styles/media.scss' as *;
+
+.construction {
+  flex: 1;
+  @include container;
+}
+
+.construction__countdown {
+  margin-bottom: 72px;
+}
+
+.construction__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 32px;
+  gap: 8px;
+}
+
+.construction__lid {
+  text-align: center;
+  max-width: 45%;
+}

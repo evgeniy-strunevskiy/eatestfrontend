@@ -1,7 +1,7 @@
 import styles from './Footer.module.scss'
 import classNames from 'classnames';
 import { Email } from './Email.jsx';
-import { OtherEventsButton } from './UI/OtherEventsButton.jsx';
+import { OtherEventsButton } from './UI/OtherEventsButton/OtherEventsButton.jsx';
 
 export const Footer = () => {
   return (

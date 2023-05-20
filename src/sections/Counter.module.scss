@@ -3,14 +3,17 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  padding-top: 5% 0;
 }
 
 .counter__shapeLeft {
+  width: 23%;
   position: absolute;
   top: 0;
   left: 0;
 }
 .counter__shapeRight {
+  width: 14%;
   position: absolute;
   top: 0;
   right: 0;
