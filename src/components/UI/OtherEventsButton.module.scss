@@ -1,0 +1,19 @@
+.events {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: flex-end;
+  gap: 15px;
+}
+
+.events__title {
+  color: var(--color-white);
+  font-size: 20px;
+  line-height: 1;
+}
+
+.events__arrow {
+  transform: rotate(90deg);
+}

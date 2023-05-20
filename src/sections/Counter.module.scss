@@ -1,0 +1,17 @@
+.counter {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.counter__shapeLeft {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.counter__shapeRight {
+  position: absolute;
+  top: 0;
+  right: 0;
+}

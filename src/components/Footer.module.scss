@@ -1,0 +1,13 @@
+@use '../styles/media.scss' as *;
+
+.footer {
+  background-color: var(--color-blue);
+}
+
+.footer__container {
+  @include container;
+  padding: 4% 0;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
