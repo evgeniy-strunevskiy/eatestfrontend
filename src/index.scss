@@ -1,0 +1,152 @@
+@use '/src/styles/media.scss' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:wght@400;600;700&display=swap');
+/* font-family: 'Poppins', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:wght@400;600;700&family=Roboto&display=swap');
+/* font-family: 'Roboto', sans-serif;*/
+
+@font-face {
+  font-family: 'Sf';
+  src: url(./assets/fonts/sf/SFPRODISPLAYSEMIBOLD.woff2) format('woff2');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Sf';
+  src: url(./assets/fonts/sf/SFPRODISPLAYMEDIUM.woff2) format('woff2');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Sf';
+  src: url(./assets/fonts/sf/SFPRODISPLAYREGULAR.woff2) format('woff2');
+  font-weight: 400;
+}
+
+:root {
+  --html-font-size: 18;
+  @include tablets {
+    --html-font-size: 16;
+  }
+  --color-blue-light: #1D4169;
+  --color-blue: #162C4E;
+  --color-red:  #DF2224;
+  --color-white: #F5F5F5;
+  --color-gray: #A5ADBA;
+
+}
+
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img,
+svg {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+  margin: 0;
+}
+
+/*--------------------*/
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: none;
+  background: transparent;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: var(--html-font-size);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.42;
+}
+
+/* Добавление */
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+address {
+  font-style: normal;
+}
