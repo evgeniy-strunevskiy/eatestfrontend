@@ -4,8 +4,6 @@ import { Unit } from "./UI/Unit/Unit.jsx";
 
 export const Countdown = () => {
 
-  console.log(window.innerWidth);
-
   return (
     <div className={classNames(styles.countdown)}>
       <ul className={classNames(styles.countdown__list)}>

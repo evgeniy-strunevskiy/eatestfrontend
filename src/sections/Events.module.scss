@@ -1,0 +1,12 @@
+.events {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-top: 5% 0;
+}
+
+.events__list {
+  display: flex;
+  justify-content: flex-start;
+}
