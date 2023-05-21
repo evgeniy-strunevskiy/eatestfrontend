@@ -13,7 +13,13 @@
   position: absolute;
   top: 0;
   left: 0;
+  opacity: 0;
+  animation: introLeft 1s ease-in-out;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
   @include tablets {
+    opacity: 1;
+    animation: none;
     width: 42%;
     top: -135px;
     left: -29px;
@@ -29,7 +35,13 @@
   position: absolute;
   top: 0;
   right: 0;
+  opacity: 0;
+  animation: introRight 1s ease-in-out;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
   @include tablets {
+    animation: none;
+    opacity: 1;
     width: 38%;
     right: -46px;
   }
@@ -37,5 +49,30 @@
     width: 54%;
     right: -49px;
     top: -60px;
+  }
+}
+
+@keyframes introLeft {
+  0% {
+    top: -200px;
+    left: -200px;
+  }
+  
+  100% {
+    top: 0;
+    left: 0;
+    opacity: 1;
+  }
+}
+@keyframes introRight {
+  0% {
+    top: -100px;
+    right: -100px;
+  }
+  
+  100% {
+    top: 0;
+    right: 0;
+    opacity: 1;
   }
 }

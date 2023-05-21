@@ -1,6 +1,31 @@
+@use '../styles/media.scss' as *;
+
 .event {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 12px;
+  opacity: 0;
+  animation: intro 1s ease-in-out;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+  position: relative;
+  @include tablets {
+    opacity: 1;
+    animation: none;
+    opacity: 1;
+  }
 }
+
+@keyframes intro {
+  0% {
+    opacity: 0;
+    top: -30px;
+  }
+  
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+

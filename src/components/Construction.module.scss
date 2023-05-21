@@ -10,7 +10,14 @@
 
 .construction__countdown {
   margin-bottom: 72px;
+  animation: intro 1s ease-in-out ;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+  opacity: 0;
+  position: relative;
   @include tablets {
+    opacity: 1;
+    animation: none;
     margin-bottom: 40px;
   }
 }
@@ -26,4 +33,24 @@
 .construction__lid {
   text-align: center;
   max-width: 45%;
+  opacity: 0;
+  animation: intro 1s ease-in-out;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  position: relative;
+  @include tablets {
+    animation: none;
+  }
+}
+
+@keyframes intro {
+  0% {
+    opacity: 0;
+    top: -30px;
+  }
+  
+  100% {
+    opacity: 1;
+    top: 0;
+  }
 }
