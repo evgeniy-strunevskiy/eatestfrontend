@@ -1,3 +1,5 @@
+@use '../../../styles/media.scss' as *;
+
 .events {
   position: absolute;
   right: 0;
@@ -6,12 +8,20 @@
   display: flex;
   align-items: flex-end;
   gap: 15px;
+  @include tablets {
+    position: relative;
+    transform: translateY(0);
+    gap: 8px;
+  }
 }
 
 .events__title {
   color: var(--color-white);
   font-size: 20px;
   line-height: 1;
+  @include tablets {
+    font-size: 16px;
+  }
 }
 
 .events__arrow {

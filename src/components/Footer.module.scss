@@ -10,4 +10,12 @@
   display: flex;
   justify-content: center;
   position: relative;
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  @include phones {
+    padding: 10% 0;
+  }
 }

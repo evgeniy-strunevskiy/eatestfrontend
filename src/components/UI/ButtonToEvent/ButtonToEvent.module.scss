@@ -1,5 +1,7 @@
+@use  '../../../styles/media.scss' as *;
+
 .button {
-  width: 30%;
+  width: 13%;
   padding: 16px 20px 16px 28px;
   border-radius: 40px;
   background-color: var(--color-blue);
@@ -7,4 +9,10 @@
   align-items: center;
   justify-content: space-between;
   color: var(--color-white);
+  @include tablets {
+    width: 33%;
+  }
+  @include phones {
+    width: 77%;
+  }
 }

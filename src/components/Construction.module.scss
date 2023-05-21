@@ -2,11 +2,17 @@
 
 .construction {
   flex: 1;
+}
+
+.construction__container {
   @include container;
 }
 
 .construction__countdown {
   margin-bottom: 72px;
+  @include tablets {
+    margin-bottom: 40px;
+  }
 }
 
 .construction__info {

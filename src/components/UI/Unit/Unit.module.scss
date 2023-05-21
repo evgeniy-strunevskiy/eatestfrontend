@@ -1,5 +1,10 @@
+@use '../../../styles/media.scss' as *;
+
+
 .unit {
-  width: 132px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .unit__number {
@@ -14,6 +19,9 @@
   text-align: center;
   color: var(--color-blue);
   position: relative;
+  @include tablets {
+    font-size: 36px;
+  }
   &::before, &::after {
     content: '';
     width: 10px;
@@ -22,6 +30,11 @@
     border-radius: 50%;
     position: absolute;
     right: -25px;
+    @include tablets {
+      width: 6px;
+      height: 6px;
+      right: -30px;
+    }
   }
   &::before {
     top: 26%;
@@ -40,14 +53,65 @@
 
 .unit__time {
   position: relative;
-  
+  &_days {
+    &::before {
+      content: 'days';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      color: var(--color-white);
+      @include tablets {
+        content: 'DD';
+      }
+    }
+  }
+  &_hours {
+    &::before {
+      content: 'hours';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      color: var(--color-white);
+      @include tablets {
+        content: 'HH';
+      }
+    }
+  }
+  &_minutes {
+    &::before {
+      content: 'minutes';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      color: var(--color-white);
+      @include tablets {
+        content: 'MM';
+      }
+    }
+  }
+  &_seconds {
+    &::before {
+      content: 'seconds';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      color: var(--color-white);
+      @include tablets {
+        content: 'SS';
+      }
+    }
+  }
 }
 
-.unit__date {
-  color: var(--color-white);
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.unit__shape {
+  width: 100%;
+  height: 40px;
 }

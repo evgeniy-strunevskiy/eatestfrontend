@@ -1,3 +1,5 @@
+@use '../../../styles/media.scss' as *;
+
 .button {
   flex: 0 0 auto;
   width: 43px;
@@ -7,4 +9,8 @@
   justify-content: center;
   align-items: center;
   background-color: var(--color-red);
+  @include tablets {
+    width: 33px;
+    height: 33px;
+  }
 }

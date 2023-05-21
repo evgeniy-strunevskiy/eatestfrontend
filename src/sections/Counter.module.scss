@@ -1,3 +1,5 @@
+@use  '../styles/media.scss' as *;
+
 .counter {
   min-height: 100vh;
   position: relative;
@@ -11,10 +13,29 @@
   position: absolute;
   top: 0;
   left: 0;
+  @include tablets {
+    width: 42%;
+    top: -135px;
+    left: -29px;
+  }
+  @include phones {
+    top: -152px;
+    left: -11px;
+    width: 59%;
+  }
 }
 .counter__shapeRight {
   width: 14%;
   position: absolute;
   top: 0;
   right: 0;
+  @include tablets {
+    width: 38%;
+    right: -46px;
+  }
+  @include phones {
+    width: 54%;
+    right: -49px;
+    top: -60px;
+  }
 }
