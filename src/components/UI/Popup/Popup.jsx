@@ -8,10 +8,15 @@ export const Popup = ({ setPopupVisible, responseServer }) => {
   const response = responseServer === "SUCCESS!" ? success : responseServer
   console.log(responseServer);
 
+  const handleVisible = () => {
+    setPopupVisible(false)
+    document.body.style.overflow = "auto";
+  }
+
   return (
     <div
       className={classNames(styles.popup)}
-      onClick={() => setPopupVisible(false)}
+      onClick={handleVisible}
     >
       <div
         className={classNames(styles.popup__body)}
@@ -19,14 +24,14 @@ export const Popup = ({ setPopupVisible, responseServer }) => {
       >
         <Cross
           className={classNames(styles.popup__cross)}
-          onClick={() => setPopupVisible(false)}
+          onClick={handleVisible}
         />
         <h2 className={classNames(styles.popup__title)}>{title}</h2>
         <div className={classNames(styles.popup__lid)}>
           {response}
         </div>
         <button
-          onClick={() => setPopupVisible(false)}
+          onClick={handleVisible}
           className={classNames(styles.popup__button)}
         >
           Close

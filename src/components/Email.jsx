@@ -16,6 +16,7 @@ export const Email = () => {
 
   const handleSubmit = async (e) =>  {
     e.preventDefault();
+    document.body.style.overflow = "hidden";
       try {
         await emailServer.addEmail(email);
         setPopupVisible(true);
