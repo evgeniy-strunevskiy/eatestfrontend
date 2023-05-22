@@ -1,4 +1,10 @@
+@use '../styles/media.scss' as *;
+
 .countdown__list {
   display: flex;
   justify-content: center;
+  gap: 20px;
+  @include phones {
+    gap: 0px;
+  }
 }
