@@ -8,8 +8,15 @@
   padding-top: 5% 0;
 }
 
+.events__container {
+  @include container
+}
+
 .events__list {
   display: flex;
   justify-content: center;
-
+  @include tablets {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 }

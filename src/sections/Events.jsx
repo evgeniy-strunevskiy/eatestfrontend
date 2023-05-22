@@ -20,17 +20,19 @@ export const Events = () => {
 
   return (
     <section className={classNames(styles.events)}>
-      <Title title={"All Events"} />
-      <ul className={classNames(styles.events__list)}>
-        {events.map((event) => (
-          <li
-            className={classNames(styles.events__item)}
-            key={event.id}
-          >
-            <UpcomingEvent event={event} setActiveEvent={setActiveEvent} activeEvent={activeEvent} />
-          </li>
-        ))}
-      </ul>
+      <div className={classNames(styles.events__container)}>
+        <Title title={"All Events"} />
+        <ul className={classNames(styles.events__list)}>
+          {events.map((event) => (
+            <li
+              className={classNames(styles.events__item)}
+              key={event.id}
+            >
+              <UpcomingEvent event={event} setActiveEvent={setActiveEvent} activeEvent={activeEvent} />
+            </li>
+          ))}
+        </ul>
+      </div>
     </section>
   );
 };

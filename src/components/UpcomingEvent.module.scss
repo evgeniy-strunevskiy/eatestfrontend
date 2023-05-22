@@ -1,9 +1,12 @@
-@use '../styles/media.scss' as *;
+@use "../styles/media.scss" as *;
 
 .upcomingEvent {
   display: flex;
   overflow: hidden;
   position: relative;
+  @include tablets {
+    flex-direction: column;
+  }
 }
 
 .upcomingEvent__header {
@@ -24,9 +27,18 @@
   gap: 40px;
   padding: 18px 20px 25px;
   height: 685px;
-  width: 82px;
   z-index: 10;
   gap: 12px;
+  @include tablets {
+    background: linear-gradient(
+        to left,
+        rgba(25, 83, 226, 0.5970763305322129) 0%,
+        rgba(0, 0, 0, 1) 90%
+      ),
+      url(../../public/images/1.png);
+    flex-direction: row;
+    height: 100px;
+  }
 }
 
 .upcomingEvent__number {
@@ -42,6 +54,10 @@
   writing-mode: vertical-lr;
   transform: rotate(-180deg);
   white-space: nowrap;
+  @include tablets {
+    writing-mode: horizontal-tb;
+    transform: rotate(0deg);
+  }
 }
 
 .upcomingEvent__body {
@@ -56,11 +72,25 @@
   &_active {
     max-width: 995px;
   }
+
+  @include tablets {
+    max-height: 0;
+    width: 100%;
+    transition: max-height 1s linear;
+    &_active {
+      max-height: 460px;
+    }
+  }
 }
 
 .upcomingEvent__box {
   width: 995px;
   display: flex;
+  @include tablets {
+    display: block;
+    width: 100%;
+    height: 460px;
+  }
 }
 
 .upcomingEvent__content {
@@ -72,7 +102,12 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  @include tablets {
+    padding: 30px 50px 50px 40px;
+    align-items: start;
+  }
 }
+
 .upcomingEvent__name {
   font-size: 24px;
   font-weight: 600;
@@ -90,4 +125,11 @@
   font-size: 360px;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.04);
+  @include tablets {
+    top: -12%;
+    left: 65%;
+    font-size: 152px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.04);
+  }
 }
