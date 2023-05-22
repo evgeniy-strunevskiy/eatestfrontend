@@ -15,3 +15,12 @@
     min-width: 280px;
   }
 }
+
+.email__input {
+    width: 100%;
+    padding: 16px 0;
+    background-color: transparent;
+    @include tablets {
+      padding: 10px 0;
+    }
+}
