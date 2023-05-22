@@ -3,7 +3,6 @@ import classNames from "classnames";
 import { ButtonInfo } from "./UI/ButtonInfo/ButtonInfo.jsx";
 
 export const UpcomingEvent = ({ event, setActiveEvent, activeEvent }) => {
-  
   return (
     <article className={classNames(styles.upcomingEvent)}>
       <div
@@ -22,17 +21,19 @@ export const UpcomingEvent = ({ event, setActiveEvent, activeEvent }) => {
           [styles.upcomingEvent__body_active]: activeEvent === event.id,
         })}
       >
-        <div className={classNames(styles.upcomingEvent__content)}>
-          <div className={classNames(styles.upcomingEvent__bodyNumber)}>
-            {event.id >= 10 ? event.id : "0" + event.id}
+        <div className={classNames(styles.upcomingEvent__box)}>
+          <div className={classNames(styles.upcomingEvent__content)}>
+            <div className={classNames(styles.upcomingEvent__bodyNumber)}>
+              {event.id >= 10 ? event.id : "0" + event.id}
+            </div>
+            <div className={classNames(styles.upcomingEvent__name)}>
+              {event.name}
+            </div>
+            <div className={classNames(styles.upcomingEvent__date)}>
+              {event.date}
+            </div>
+            <ButtonInfo />
           </div>
-          <div className={classNames(styles.upcomingEvent__name)}>
-            {event.name}
-          </div>
-          <div className={classNames(styles.upcomingEvent__date)}>
-            {event.date}
-          </div> 
-           <ButtonInfo />
         </div>
       </div>
     </article>

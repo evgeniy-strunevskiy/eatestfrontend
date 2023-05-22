@@ -1,3 +1,5 @@
+@use '../styles/media.scss' as *;
+
 .upcomingEvent {
   display: flex;
   overflow: hidden;
@@ -5,7 +7,16 @@
 }
 
 .upcomingEvent__header {
-  background-color: var(--color-blue);
+  background-image: url(../../public/images/1.png);
+  background: linear-gradient(
+      to bottom,
+      rgba(25, 83, 226, 0.5970763305322129) 0%,
+      rgba(0, 0, 0, 1) 90%
+    ),
+    url(../../public/images/1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
   color: var(--color-white);
   display: flex;
   flex-direction: column-reverse;
@@ -15,21 +26,21 @@
   height: 685px;
   width: 82px;
   z-index: 10;
-  gap: 90px;
+  gap: 12px;
 }
 
 .upcomingEvent__number {
   font-size: 40px;
   font-weight: 500;
-  font-family: 'sf';
-  transform: rotate(-90deg) ;
+  font-family: "sf";
 }
 
 .upcomingEvent__title {
-  font-family: 'sf';
+  font-family: "sf";
   font-size: 32px;
   font-weight: 600px;
-  transform: rotate(-90deg);
+  writing-mode: vertical-lr;
+  transform: rotate(-180deg);
   white-space: nowrap;
 }
 
@@ -39,23 +50,28 @@
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  transition: 10s ease-in-out;
+  overflow: hidden;
+  transition: max-width 1s linear;
+  background-color: gray;
   &_active {
     max-width: 995px;
   }
 }
 
+.upcomingEvent__box {
+  width: 995px;
+  display: flex;
+}
 
 .upcomingEvent__content {
   backdrop-filter: blur(20px);
-  padding: 5px 40px 50px; 
+  padding: 5px 40px 50px;
   background: rgba(18, 18, 18, 0.8);
   color: var(--color-white);
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: end;
-  margin-right: 632px;
+  justify-content: flex-end;
 }
 .upcomingEvent__name {
   font-size: 24px;

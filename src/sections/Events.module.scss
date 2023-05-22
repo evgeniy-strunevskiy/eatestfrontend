@@ -1,3 +1,5 @@
+ @use '../styles/media.scss' as *;
+
 .events {
   min-height: 100vh;
   position: relative;
@@ -8,5 +10,6 @@
 
 .events__list {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+
 }

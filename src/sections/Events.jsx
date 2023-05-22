@@ -7,12 +7,12 @@ import { useState } from 'react';
 const events = [
   { id: 1, name: "Hawaiian party", date: "13.02.2023" },
   { id: 2, name: "Mafia party", date: "13.02.2023" },
-  // { id: 3, name: "Party", date: "13.02.2023" },
-  // { id: 4, name: "Party on the beach", date: "13.02.2023" },
-  // { id: 5, name: "Home Security", date: "13.02.2023" },
-  // { id: 6, name: "Network Design & Implementation", date: "13.02.2023" },
-  // { id: 7, name: "System Design & Engineering", date: "13.02.2023" },
-  // { id: 8, name: "Client Care Plans", date: "13.02.2023" },
+  { id: 3, name: "Party", date: "13.02.2023" },
+  { id: 4, name: "Party on the beach", date: "13.02.2023" },
+  { id: 5, name: "Home Security", date: "13.02.2023" },
+  { id: 6, name: "Network Design & Implementation", date: "13.02.2023" },
+  { id: 7, name: "System Design & Engineering", date: "13.02.2023" },
+  { id: 8, name: "Client Care Plans", date: "13.02.2023" },
 ];
 export const Events = () => {
 
