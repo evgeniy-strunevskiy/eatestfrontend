@@ -1,13 +1,14 @@
 import styles from './App.module.scss'
 import classNames from 'classnames';
-import { Counter } from './sections/Counter.jsx';
-import { Events } from './sections/Events.jsx';
+import {  Routes, Route} from 'react-router-dom';
+import { Main } from './pages/Main.jsx';
 
 function App() {
   return (
     <div className={classNames(styles.App)}>
-      <Counter />
-      <Events />
+      <Routes>
+        <Route path='/' element={<Main />}  />
+      </Routes>
     </div>
   );
 }

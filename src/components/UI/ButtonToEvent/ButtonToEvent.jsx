@@ -1,6 +1,6 @@
 import styles from "./ButtonToEvent.module.scss";
-import { ReactComponent as Arrow } from "../../../assets/svg/arrow.svg";
 import classNames from "classnames";
+import { ReactComponent as Arrow } from "../../../assets/svg/arrow.svg";
 
 export const ButtonToEvent = () => {
 
